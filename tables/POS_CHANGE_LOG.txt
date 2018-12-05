@@ -1,0 +1,21 @@
+create table POS_CHANGE_LOG
+(
+	ID NUMBER,
+	U_ID NUMBER,
+	DESCRIPTION VARCHAR2(200)
+)
+/
+
+CREATE SEQUENCE "CHANGE_LOG_SEQ"
+  MINVALUE 500
+  INCREMENT BY 1 START WITH 501
+  CACHE 100;
+/
+
+create or replace trigger BEFORE_INSERT_CHANGE_LOG
+  before insert
+  on POS_CHANGE_LOG
+  for each row
+  BEGIN
+    :new.ID := CHANGE_LOG_SEQ.nextval;
+  END;

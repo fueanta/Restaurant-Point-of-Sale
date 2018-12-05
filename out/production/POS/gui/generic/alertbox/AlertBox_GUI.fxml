@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="186.0" prefWidth="483.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.generic.alertbox.AlertBox_Controller">
+    <bottom>
+        <HBox alignment="CENTER_RIGHT" prefHeight="72.0" prefWidth="483.0" style="-fx-background-color: #eaeaea;" BorderPane.alignment="CENTER">
+            <children>
+                <JFXButton id="okBtn" fx:id="okBtn" onAction="#okBtnAction" prefHeight="35.0" prefWidth="91.0" stylesheets="@AlertBox_Stylesheet.css" text="Ok" />
+            </children>
+            <BorderPane.margin>
+                <Insets />
+            </BorderPane.margin>
+            <padding>
+                <Insets right="30.0" />
+            </padding></HBox>
+    </bottom>
+    <left>
+        <ImageView fitHeight="56.0" fitWidth="67.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+            <image>
+                <Image url="@../../../resource/image/alert.png" />
+            </image>
+            <BorderPane.margin>
+                <Insets left="20.0" />
+            </BorderPane.margin>
+        </ImageView>
+    </left>
+    <center>
+        <Label fx:id="messageBox" prefHeight="83.0" prefWidth="390.0" text="This is a alertBox. You're seeing this because the program might need your attention!" wrapText="true" BorderPane.alignment="CENTER">
+            <font>
+                <Font name="Segoe UI" size="17.0" />
+            </font></Label>
+    </center>
+</BorderPane>

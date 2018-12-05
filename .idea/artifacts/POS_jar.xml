@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="POS:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/POS_jar</output-path>
+    <root id="archive" name="POS.jar">
+      <element id="module-output" name="POS" />
+      <element id="extracted-dir" path="$APPLICATION_CONFIG_DIR$/jdbc-drivers/Oracle/12.1.0.2/ojdbc6-12.1.0.2.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="C:/Program Files/Java/jdk1.8.0_152/jre/lib/jfxswt.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Documents/Jars/JavaFx/ContrrolFx/controlsfx-8.40.14/controlsfx-8.40.14.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$APPLICATION_HOME_DIR$/redist/annotations-java8.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Documents/Jars/JavaFx/JFoenix-master/jfoenix.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

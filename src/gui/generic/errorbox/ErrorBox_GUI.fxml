@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="186.0" prefWidth="483.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.generic.errorbox.ErrorBox_Controller">
+   <bottom>
+      <HBox alignment="CENTER_RIGHT" prefHeight="72.0" prefWidth="483.0" style="-fx-background-color: #eaeaea;" BorderPane.alignment="CENTER">
+         <children>
+            <JFXButton id="okBtn" fx:id="okBtn" onAction="#okBtnAction" prefHeight="35.0" prefWidth="91.0" stylesheets="@ErrorBox_Stylesheet.css" text="Ok" />
+         </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+         <padding>
+            <Insets right="30.0" />
+         </padding></HBox>
+   </bottom>
+   <left>
+      <ImageView fitHeight="61.0" fitWidth="49.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+         <image>
+            <Image url="@../../../resource/image/error.png" />
+         </image>
+         <BorderPane.margin>
+            <Insets left="20.0" />
+         </BorderPane.margin>
+      </ImageView>
+   </left>
+   <center>
+      <Label fx:id="messageBox" prefHeight="83.0" prefWidth="378.0" text="This is an error message, If you can see this, you have done something wrong!" wrapText="true" BorderPane.alignment="CENTER">
+         <font>
+            <Font name="Segoe UI" size="17.0" />
+         </font></Label>
+   </center>
+</BorderPane>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="758.0" prefWidth="822.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.application.main_item.create.MainItemCreate_Controller">
+    <top>
+        <HBox alignment="CENTER" prefHeight="60.0" prefWidth="200.0" style="-fx-background-color: #e86a26;" BorderPane.alignment="CENTER">
+            <children>
+                <Label prefHeight="50.0" prefWidth="202.0" text="Create New Item" textFill="WHITE">
+                    <font>
+                        <Font name="Segoe UI" size="27.0" />
+                    </font>
+                </Label>
+            </children>
+        </HBox>
+    </top>
+    <bottom>
+        <HBox alignment="CENTER" prefHeight="5.0" prefWidth="200.0" spacing="30.0" style="-fx-background-color: #e86a26;" BorderPane.alignment="CENTER" />
+    </bottom>
+    <left>
+        <VBox prefHeight="312.0" prefWidth="5.0" style="-fx-background-color: #e86a26;" BorderPane.alignment="CENTER" />
+    </left>
+    <right>
+        <VBox prefHeight="200.0" prefWidth="5.0" style="-fx-background-color: #e86a26;" BorderPane.alignment="CENTER" />
+    </right>
+    <center>
+        <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <children>
+                <HBox alignment="CENTER" layoutY="603.0" prefHeight="76.0" prefWidth="727.0" spacing="40.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                    <children>
+                        <JFXButton fx:id="createBtn" onAction="#createBtnOnAction" prefHeight="35.0" prefWidth="126.0" stylesheets="@../MainItem_Stylesheet.css" text="Create New" textFill="WHITE">
+                            <font>
+                                <Font name="Segoe UI Bold" size="18.0" />
+                            </font>
+                        </JFXButton>
+                        <JFXButton fx:id="cancelBtn" onAction="#cancelBtnOnAction" prefHeight="9.0" prefWidth="126.0" stylesheets="@../MainItem_Stylesheet.css" text="Cancel" textFill="WHITE">
+                            <font>
+                                <Font name="Segoe UI Bold" size="18.0" />
+                            </font>
+                        </JFXButton>
+                    </children>
+                </HBox>
+            <AnchorPane layoutX="36.0" layoutY="36.0" prefHeight="235.0" prefWidth="210.0" style="-fx-background-color: #e86a26; -fx-border-color: black;">
+               <children>
+                  <ImageView fx:id="photo" fitHeight="192.0" fitWidth="200.0" layoutX="8.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+                     <image>
+                        <Image url="@../../../../resource/Food/default.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="94.0" layoutY="203.0" text="Photo" textFill="WHITE">
+                     <font>
+                        <Font name="Segoe UI" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <VBox alignment="TOP_CENTER" layoutX="161.0" layoutY="364.0" prefHeight="217.0" prefWidth="192.0" spacing="30.0" AnchorPane.leftAnchor="161.0">
+               <children>
+                  <JFXTextField fx:id="idField" alignment="CENTER" focusColor="#e86a26" labelFloat="true" promptText="ID" stylesheets="@../MainItem_Stylesheet.css" unFocusColor="#e56a27b2" />
+                  <JFXTextField fx:id="nameField" alignment="CENTER" focusColor="#e86a26" labelFloat="true" layoutX="10.0" layoutY="10.0" promptText="Name" stylesheets="@../MainItem_Stylesheet.css" unFocusColor="#e56a27b2" />
+                  <JFXTextField fx:id="priceField" alignment="CENTER" focusColor="#e86a26" labelFloat="true" layoutX="10.0" layoutY="71.0" promptText="Price" stylesheets="@../MainItem_Stylesheet.css" unFocusColor="#e56a27b2" />
+                  <JFXTextField fx:id="discountField" alignment="CENTER" focusColor="#e86a26" labelFloat="true" layoutX="10.0" layoutY="132.0" promptText="Discount Rate" stylesheets="@../MainItem_Stylesheet.css" unFocusColor="#e56a27b2" />
+               </children>
+            </VBox>
+            <VBox alignment="TOP_CENTER" layoutX="455.0" layoutY="364.0" prefHeight="217.0" prefWidth="192.0" spacing="30.0" AnchorPane.rightAnchor="165.0">
+               <children>
+                  <JFXTextField fx:id="typeField" alignment="CENTER" focusColor="#e86a26" labelFloat="true" promptText="Type ID" stylesheets="@../MainItem_Stylesheet.css" unFocusColor="#e56a27b2" />
+                  <JFXTextField fx:id="availabilityField" alignment="CENTER" focusColor="#e86a26" labelFloat="true" layoutX="10.0" layoutY="10.0" promptText="Availability" stylesheets="@../MainItem_Stylesheet.css" unFocusColor="#e56a27b2" />
+                  <JFXTextField fx:id="inventoryField" alignment="CENTER" focusColor="#e86a26" labelFloat="true" layoutX="10.0" layoutY="71.0" promptText="Inventory Cost" stylesheets="@../MainItem_Stylesheet.css" unFocusColor="#e56a27b2" />
+                  <JFXTextField fx:id="stockField" alignment="CENTER" focusColor="#e86a26" labelFloat="true" layoutX="10.0" layoutY="132.0" promptText="Stock Count" stylesheets="@../MainItem_Stylesheet.css" unFocusColor="#e56a27b2" />
+               </children>
+            </VBox>
+            <JFXTextArea fx:id="descriptionField" focusColor="#e86a26" layoutX="326.0" layoutY="80.0" prefHeight="191.0" prefWidth="413.0" promptText="Description" stylesheets="@../MainItem_Stylesheet.css" unFocusColor="#e86a26" />
+            <JFXButton fx:id="upload" layoutX="99.0" layoutY="300.0" onAction="#uploadAction" prefHeight="38.0" prefWidth="89.0" stylesheets="@../MainItem_Stylesheet.css" text="Upload" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI Bold" size="18.0" />
+               </font>
+            </JFXButton>
+            </children>
+        </AnchorPane>
+    </center>
+</BorderPane>

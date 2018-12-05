@@ -1,0 +1,24 @@
+create table POS_TYPE
+(
+	ID NUMBER,
+	NAME VARCHAR2(20),
+	DESCRIPTION VARCHAR2(200),
+	DISCOUNT_RATE FLOAT
+)
+/
+
+CREATE SEQUENCE "TYPE_SEQ"
+	MINVALUE 500
+	INCREMENT BY 1 START WITH 501
+	CACHE 100;
+/
+
+create or replace trigger BEFORE_INSERT_TYPE
+	before insert
+	on POS_TYPE
+	for each row
+	BEGIN
+		:new.ID := TYPE_SEQ.nextval;
+	END;
+/
+

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="941.0" prefWidth="1009.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.application.dashboard.DashBoad_Controller">
+    <top>
+        <HBox alignment="CENTER" prefHeight="60.0" prefWidth="939.0" style="-fx-background-color: #e86a26;" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="Dashboard" textFill="WHITE">
+               <font>
+                  <Font size="39.0" />
+               </font>
+            </Label>
+         </children></HBox>
+    </top>
+    <bottom>
+        <HBox alignment="CENTER" prefHeight="48.0" prefWidth="939.0" style="-fx-background-color: #e86a26;" BorderPane.alignment="CENTER">
+         <children>
+            <JFXButton onAction="#logOutOnAction" style="-fx-border-color: white;" text="LOG OUT" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI Bold" size="18.0" />
+               </font>
+            </JFXButton>
+         </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin></HBox>
+    </bottom>
+    <left>
+        <VBox prefHeight="200.0" prefWidth="5.0" style="-fx-background-color: #e86a26;" BorderPane.alignment="CENTER" />
+    </left>
+    <right>
+        <VBox prefHeight="200.0" prefWidth="5.0" style="-fx-background-color: #e86a26;" BorderPane.alignment="CENTER" />
+    </right>
+    <center>
+        <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="836.0" prefWidth="1005.0" style="-fx-border-color: #e86a26;" BorderPane.alignment="CENTER">
+         <children>
+            <HBox layoutX="104.0" layoutY="59.0" prefHeight="212.0" prefWidth="792.0" style="-fx-border-color: #e86a26;">
+               <children>
+                  <AnchorPane prefHeight="210.0" prefWidth="824.0">
+                     <children>
+                        <AnchorPane layoutX="14.0" layoutY="-19.0" prefHeight="66.0" prefWidth="250.0" style="-fx-background-color: #e86a26;">
+                           <children>
+                              <Label layoutX="48.0" layoutY="19.0" text="Manage Items" textFill="WHITE">
+                                 <font>
+                                    <Font name="Segoe UI Bold" size="23.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                        <JFXButton layoutX="51.0" layoutY="62.0" onAction="#inventoryOnAction" prefHeight="123.0" prefWidth="176.0" stylesheets="@DashBoard_Stylesheet.css" text="Inventory Items" AnchorPane.leftAnchor="51.0" AnchorPane.topAnchor="62.0" />
+                        <JFXButton layoutX="307.0" layoutY="62.0" onAction="#foodOnAction" prefHeight="123.0" prefWidth="176.0" stylesheets="@DashBoard_Stylesheet.css" text="Food Items" AnchorPane.leftAnchor="307.0" AnchorPane.rightAnchor="307.0" AnchorPane.topAnchor="62.0" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </HBox>
+            <HBox layoutX="104.0" layoutY="311.0" prefHeight="212.0" prefWidth="792.0" style="-fx-border-color: #e86a26;">
+               <children>
+                  <AnchorPane prefHeight="210.0" prefWidth="801.0">
+                     <children>
+                        <AnchorPane layoutX="14.0" layoutY="-19.0" prefHeight="66.0" prefWidth="250.0" style="-fx-background-color: #e86a26;">
+                           <children>
+                              <Label layoutX="57.0" layoutY="19.0" text="Transactions" textFill="WHITE">
+                                 <font>
+                                    <Font name="Segoe UI Bold" size="23.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                        <JFXButton layoutX="51.0" layoutY="60.0" onAction="#purchaseOnAction" prefHeight="123.0" prefWidth="176.0" stylesheets="@DashBoard_Stylesheet.css" text="Purchases" AnchorPane.leftAnchor="51.0" />
+                        <JFXButton layoutX="307.0" layoutY="60.0" onAction="#orderOnAction" prefHeight="123.0" prefWidth="176.0" stylesheets="@DashBoard_Stylesheet.css" text="Orders" AnchorPane.leftAnchor="307.0" AnchorPane.rightAnchor="306.0" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </HBox>
+            <HBox layoutX="104.0" layoutY="565.0" prefHeight="212.0" prefWidth="792.0" style="-fx-border-color: #e86a26;">
+               <children>
+                  <AnchorPane prefHeight="210.0" prefWidth="816.0">
+                     <children>
+                        <AnchorPane layoutX="14.0" layoutY="-19.0" prefHeight="66.0" prefWidth="250.0" style="-fx-background-color: #e86a26;">
+                           <children>
+                              <Label layoutX="89.0" layoutY="19.0" text="Others" textFill="WHITE">
+                                 <font>
+                                    <Font name="Segoe UI Bold" size="23.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                        <JFXButton fx:id="usr" layoutX="307.0" layoutY="61.0" onAction="#userOnAction" prefHeight="123.0" prefWidth="176.0" stylesheets="@DashBoard_Stylesheet.css" text="User Details" AnchorPane.leftAnchor="307.0" />
+                        <JFXButton layoutX="558.0" layoutY="61.0" onAction="#supplierOnAction" prefHeight="123.0" prefWidth="176.0" stylesheets="@DashBoard_Stylesheet.css" text="Supplier Details" AnchorPane.leftAnchor="558.0" />
+                        <JFXButton fx:id="admin" layoutX="51.0" layoutY="61.0" onAction="#adminOnaction" prefHeight="123.0" prefWidth="176.0" stylesheets="@DashBoard_Stylesheet.css" text="Admin View" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </HBox>
+            <Label fx:id="userLabel" layoutX="896.0" layoutY="14.0" prefHeight="27.0" prefWidth="90.0" text="USER" textFill="#04da0b">
+               <font>
+                  <Font name="Segoe UI Bold" size="21.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
+    </center>
+</BorderPane>

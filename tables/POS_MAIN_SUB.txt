@@ -1,0 +1,7 @@
+create table POS_MAIN_SUB
+(
+	M_ID NUMBER,
+	S_ID NUMBER,
+	S_COUNT NUMBER default 1
+)
+/

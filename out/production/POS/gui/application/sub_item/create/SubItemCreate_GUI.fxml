@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="512.0" prefWidth="735.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.application.sub_item.create.SubItemCreate_Controller">
+    <top>
+        <HBox alignment="CENTER" prefHeight="60.0" prefWidth="200.0" style="-fx-background-color: #e86a26;" BorderPane.alignment="CENTER">
+            <children>
+                <Label prefHeight="50.0" prefWidth="321.0" text="Create New Inventory Item" textFill="WHITE">
+                    <font>
+                        <Font name="Segoe UI" size="27.0" />
+                    </font>
+                </Label>
+            </children>
+        </HBox>
+    </top>
+    <bottom>
+        <HBox alignment="CENTER" prefHeight="5.0" prefWidth="200.0" spacing="30.0" style="-fx-background-color: #e86a26;" BorderPane.alignment="CENTER" />
+    </bottom>
+    <left>
+        <VBox prefHeight="312.0" prefWidth="5.0" style="-fx-background-color: #e86a26;" BorderPane.alignment="CENTER" />
+    </left>
+    <right>
+        <VBox prefHeight="200.0" prefWidth="5.0" style="-fx-background-color: #e86a26;" BorderPane.alignment="CENTER" />
+    </right>
+    <center>
+        <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <children>
+                <HBox alignment="CENTER" layoutX="-3.0" layoutY="343.0" prefHeight="104.0" prefWidth="725.0" spacing="40.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                    <children>
+                        <JFXButton fx:id="createBtn" onAction="#createBtnOnAction" prefHeight="35.0" prefWidth="126.0" stylesheets="@SubItemCreate_Stylesheet.css" text="Create New" textFill="WHITE">
+                            <font>
+                                <Font name="Segoe UI Bold" size="18.0" />
+                            </font>
+                        </JFXButton>
+                        <JFXButton fx:id="cancelBtn" onAction="#cancelBtnOnAction" prefHeight="9.0" prefWidth="126.0" stylesheets="@SubItemCreate_Stylesheet.css" text="Cancel" textFill="WHITE">
+                            <font>
+                                <Font name="Segoe UI Bold" size="18.0" />
+                            </font>
+                        </JFXButton>
+                    </children>
+                </HBox>
+                <VBox layoutX="81.0" layoutY="50.0" prefHeight="131.0" prefWidth="240.0" spacing="30.0" AnchorPane.leftAnchor="80.0">
+                    <children>
+                        <JFXTextField fx:id="idField" alignment="CENTER" focusColor="#e86a26" prefHeight="31.0" prefWidth="207.0" promptText="ID" stylesheets="@SubItemCreate_Stylesheet.css" unFocusColor="#e56a27b3" />
+                  <JFXTextField fx:id="costField" alignment="CENTER" focusColor="#e86a26" layoutX="10.0" layoutY="10.0" prefHeight="31.0" prefWidth="207.0" promptText="Unit Cost" stylesheets="@SubItemCreate_Stylesheet.css" unFocusColor="#e56a27b3" />
+                    </children>
+                </VBox>
+                <VBox layoutX="412.0" layoutY="50.0" prefHeight="133.0" prefWidth="240.0" spacing="30.0" AnchorPane.rightAnchor="80.0">
+                    <children>
+                        <JFXTextField fx:id="nameField" alignment="CENTER" focusColor="#e86a26" prefHeight="31.0" prefWidth="207.0" promptText="Name" stylesheets="@SubItemCreate_Stylesheet.css" unFocusColor="#e56a27b3" />
+                  <JFXTextField fx:id="countField" alignment="CENTER" focusColor="#e86a26" layoutX="10.0" layoutY="10.0" prefHeight="31.0" prefWidth="207.0" promptText="Count" stylesheets="@SubItemCreate_Stylesheet.css" unFocusColor="#e56a27b3" />
+                    </children>
+                </VBox>
+            <JFXTextArea fx:id="descriptionField" focusColor="#e86a26" layoutX="80.0" layoutY="194.0" prefHeight="131.0" prefWidth="566.0" promptText="Description" stylesheets="@SubItemCreate_Stylesheet.css" unFocusColor="#e56a27b2" />
+            </children>
+        </AnchorPane>
+    </center>
+</BorderPane>

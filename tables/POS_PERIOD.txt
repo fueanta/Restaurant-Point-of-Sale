@@ -1,0 +1,22 @@
+create table POS_PERIOD
+(
+	ID NUMBER,
+	U_ID NUMBER,
+	LOGIN_TIME DATE default NULL,
+	LOGOUT_TIME DATE default NULL
+)
+/
+
+CREATE SEQUENCE "POS_PERIOD_SEQ"
+  MINVALUE 1000
+  INCREMENT BY 1 START WITH 1001
+  CACHE 100;
+/
+
+create or replace trigger BEFORE_INSERT_POS_PERIOD
+  before insert
+  on POS_PERIOD
+  for each row
+  BEGIN
+    :new.ID := POS_PERIOD_SEQ.nextval;
+  END;

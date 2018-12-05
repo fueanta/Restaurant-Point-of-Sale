@@ -1,0 +1,5 @@
+create table POS_VAT
+(
+	PERCENTAGE FLOAT not null
+)
+/

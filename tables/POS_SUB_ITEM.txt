@@ -1,0 +1,23 @@
+create table POS_SUB_ITEM
+(
+	ID NUMBER,
+	NAME VARCHAR2(20),
+	DESCRIPTION VARCHAR2(200),
+	UNIT_COST FLOAT,
+	COUNT NUMBER default 0
+)
+/
+
+CREATE SEQUENCE "SUB_ITEM_SEQ"
+  MINVALUE 100
+  INCREMENT BY 1 START WITH 101
+  CACHE 100;
+/
+
+create or replace trigger BEFORE_INSERT_SUB_ITEM
+  before insert
+  on POS_SUB_ITEM
+  for each row
+  BEGIN
+    :new.ID := SUB_ITEM_SEQ.nextval;
+  END;

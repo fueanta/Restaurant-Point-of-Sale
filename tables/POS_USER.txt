@@ -1,0 +1,29 @@
+create table POS_USER
+(
+	ID NUMBER,
+	USERNAME VARCHAR2(30) default NULL,
+	PASSWORD VARCHAR2(50) default '1234',
+	ADMIN_ACCESS VARCHAR2(1) default 'N',
+	DESCRIPTION VARCHAR2(200) default 'Not Given!',
+	SALARY FLOAT default 1000,
+	COMMISSION FLOAT default 0,
+	HIRE_DATE DATE default SYSDATE,
+	PICTURE BLOB default empty_blob()
+)
+/
+
+CREATE SEQUENCE "USER_SEQ"
+MINVALUE 100 MAXVALUE 999
+INCREMENT BY 1 START WITH 101
+CACHE 100
+ORDER CYCLE;
+/
+
+create or replace trigger BEFORE_INSERT_USER
+    before insert
+    on POS_USER
+    for each row
+BEGIN
+    :new.ID := user_seq.nextval;
+  END;
+/

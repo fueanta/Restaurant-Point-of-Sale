@@ -1,0 +1,7 @@
+create table POS_ORDER_ITEM
+(
+	O_ID NUMBER,
+	M_ID NUMBER,
+	QUANTITY NUMBER
+)
+/

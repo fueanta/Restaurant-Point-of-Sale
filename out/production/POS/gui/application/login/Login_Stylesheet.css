@@ -1,0 +1,61 @@
+/*
+My Customized stylesheet for POS - Login
+ */
+
+.not-connected {
+    -fx-text-fill: red;
+    -fx-font-weight: bold;
+}
+
+.connected {
+    -fx-text-fill: green;
+    -fx-font-weight: bold;
+}
+
+/*
+#refreshBtn {
+    -fx-background-color: rgba(230, 106, 38, .3);
+    -fx-background-radius: 5px;
+    -fx-border-color: rgba(232, 106, 38, 1);
+    -fx-border-radius: 5px;
+}
+*/
+
+.button {
+    -fx-background-color: rgba(230, 106, 38, .3);
+    -fx-background-radius: 5px;
+
+    -fx-border-color: rgba(232, 106, 38, 1);
+    -fx-border-radius: 5px;
+
+    -fx-font-weight: bold;
+    -fx-text-fill: rgba(232, 106, 38, 1);
+}
+
+.button:hover {
+    -fx-background-color: rgba(232, 106, 38, 1);
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+#usrField {
+    -fx-prompt-text-fill: grey;
+    -fx-text-fill: rgba(232, 106, 38, 1);
+}
+
+#usrField:hover {
+    -fx-prompt-text-fill: grey;
+    -fx-font-weight: bold;
+    -fx-text-fill: rgba(232, 106, 38, 1);
+}
+
+#passField {
+    -fx-prompt-text-fill: grey;
+    -fx-text-fill: rgba(232, 106, 38, 1);
+}
+
+#passField:hover {
+    -fx-prompt-text-fill: grey;
+    -fx-font-weight: bold;
+    -fx-text-fill: rgba(232, 106, 38, 1);
+}
